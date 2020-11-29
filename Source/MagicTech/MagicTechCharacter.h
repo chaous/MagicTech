@@ -4,6 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+
+
+
+
 #include "MagicTechCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -23,11 +27,24 @@ public:
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
-	float BaseTurnRate;
+		float BaseTurnRate;
 
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
-	float BaseLookUpRate;
+		float BaseLookUpRate;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Name")
+		FString PlayerName;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Characteristics")
+		float Mana;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Characteristics")
+		float Health;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Characteristics")
+		float EXP;
+	
 
 protected:
 

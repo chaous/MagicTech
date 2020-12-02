@@ -32,6 +32,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Helth")
 		float Health;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "BeenPossest")
+		bool BeenPossed;
 	
 
 protected:
